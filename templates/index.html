@@ -1,0 +1,226 @@
+<html>
+	<head><title>Churn Risk Prediction</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	</head>
+	<body>
+		<style>
+		body{
+			background-image: url('../image');
+      font-family: 'Poppins', sans-serif;
+		}
+    h4{
+      font-weight: 600;
+    }
+		</style>
+		<script>
+$(document).ready(function(){
+    $('select').formSelect();
+  });
+		</script>
+
+
+		<div class="row"><br>
+    <div class="col s1 m3 l4"></div>
+    <div class="col s10 l4 m6 ">
+    <div class="row">
+    <div class="col s12 z-depth-4 card-panel">
+    <div class="row">
+    <div class="col s12">
+    <center>
+    <h4>Churn Prediction</h4>
+    </center>
+    </div>
+    </div> 
+        <form id="myform" action="#" method="POST">
+
+
+    <div class="input-field col s12">
+    <select name='membership' id="membership" required>
+      <option value="" disabled selected>Choose your Type</option>
+      <option value="0">No Membership</option>
+      <option value="1">Basic Membership</option>
+      <option value="2">Silver Membership</option>
+      <option value="3">Gold Membership</option>
+      <option value="4">Platinum Membership</option>
+      <option value="5">Premium Membership</option>
+    </select name='model'>
+    <label>Membership Category</label>
+  </div>
+
+<div class="input-field col s12">
+    <select name='complaint' id="complaint" required>
+      <option value="" disabled selected>Choose your Type</option>
+      <option value="0">No Information Available</option>
+      <option value="1">Not Applicable</option>
+      <option value="2">Unsolved</option>
+      <option value="3">Solved</option>
+      <option value="4">Solved in Follow-up</option>
+    </select name='model'>
+    <label>Complaint Status</label>
+  </div>
+  <div class="input-field col s12">
+    <select name='feedback' id="feedback" required>
+      <option value="" disabled selected>Choose your Type</option>
+      <option value="0">No reason specified</option>
+      <option value="1">Poor Customer Service</option>
+      <option value="2">Poor Product Quality</option>
+      <option value="3">Poor Website</option>
+      <option value="4">Products always in Stock</option>
+      <option value="5">Quality Customer Care</option>
+      <option value="6">Reasonable Price</option>
+      <option value="7">Too many ads</option>
+      <option value="8">User Friendly Website</option>
+    </select name='model'>
+    <label>Feedback</label>
+  </div>
+
+
+  <div class="input-field col s12">
+  		<input type="number" name="age" id="age" step=".01">
+  		<label for="age">Age</label>
+  	</div>
+
+
+    <div class="input-field col s12">
+    	<div class="row">	
+    	<div class="col s4">
+    	Gender : </div>
+    	<div class="col s4">
+      <label>
+        <input class="with-gap" name="gender" value=1 type="radio" checked/>
+        <span>Male</span>
+      </label></div>
+      <div class="col s4">
+      <label>
+        <input class="with-gap" name="gender" value=0 type="radio" />
+        <span>Female</span>
+      </label></div>
+  </div></div>
+
+  <div class="input-field col s12">
+      <input type="number" name="year" id="year">
+      <label for="year">Year since Joined</label>
+    </div>
+
+  	<div class="input-field col s12">
+  		<input type="number" name="dsll" id="dsll" step=".01">
+  		<label for="dsll">Days since last login</label>
+  	</div>
+
+    <div class="input-field col s12">
+      <input type="number" name="ats" id="ats" step=".01">
+      <label for="ats">Avg Time Spent</label>
+    </div>
+
+    <div class="input-field col s12">
+      <input type="number" name="atv" id="atv" step=".01">
+      <label for="atv">Avg Transaction Value</label>
+    </div>
+
+    <div class="input-field col s12">
+      <input type="number" name="afld" id="afld" step=".01">
+      <label for="afld">Avg Frequency of Login Days</label>
+    </div>
+
+
+  	<div class="input-field col s12">
+  		<input type="number" name="points" id="points" step=".01">
+  		<label for="points">Points in wallet</label>
+  	</div>
+
+      <div class="row">
+        <div class="col s3"></div>
+        <div class="col s6"><center>
+          <button style="width=100;background-color: #6698e3;" class="btn" type="submit">Check</button></center>
+        </div>
+      <div class="col s3"></div>
+    </div>
+
+
+       </form>
+      <h5>
+      <div class="row">
+        <div class="col s1"></div><center>
+        <div class="col s10" id='prediction'>
+          
+        </div></center>
+      <div class="col s1"></div>
+    </div></h5>
+     <div class="col s1 m3 l4"></div>
+ </div>  </div></div>
+ <style>
+    .input-field label {
+     color: #6698e3;
+   }
+   .input-field input[type=text]:focus + label {
+     color: #6698e3;
+   }
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #6698e3;
+     box-shadow: 0 1px 0 0 #6698e3;
+   }
+   .input-field .prefix.active {
+     color: #6698e3;
+   }
+ </style>
+<script>
+	
+	$("#myform").submit(function(e) {
+    e.preventDefault();
+    var form = $(this);
+    var url = 'http://127.0.0.1:8000/predict';
+    var gender=$('input[name="gender"]:checked').val();
+    var age=$('#age').val()
+    var dsll=$('#dsll').val()
+    var ats=$('#ats').val()
+    var atv=$('#atv').val()
+    var afld=$('#afld').val()
+    var points=$('#points').val()
+    var year=$('#year').val()
+    var membership=$('#membership').children("option:selected").val();
+    var complaint=$('#complaint').children("option:selected").val();
+    var feedback=$('#feedback').children("option:selected").val();
+    $.ajax({url:url,
+    	type:'GET',
+      dataType: "json",
+    	data:
+  	{
+    gender_M: gender,
+    year:year,
+    membership_category: membership,
+    complaint_status: complaint,
+    feedback: feedback,
+    age:age,
+    days_since_last_login:dsll,
+    avg_time_spent:ats,
+    avg_transaction_value:atv,
+    avg_frequency_login_days:afld,
+    points_in_wallet:points,
+  	},
+  	success: function(data, status){
+  		var v=data['p'];
+      console.log(v);
+      var h='output';
+      if(v==1)
+      {
+        h='<div class="card-panel red white-text darken-3">Customer will Exit</div>';
+      }
+      else{
+        h='<div class="card-panel green white-text darken-3">Customer will Stay</div>';
+      }
+    $('#prediction').html(h);
+  }});
+});
+		
+</script>
+	</body>
+</html>
