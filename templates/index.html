@@ -177,7 +177,7 @@ $(document).ready(function(){
 	$("#myform").submit(function(e) {
     e.preventDefault();
     var form = $(this);
-    var url = 'http://0.0.0.0:5000/predict';
+    var url = 'https://churn01.herokuapp.com/predict';
     var gender=$('input[name="gender"]:checked').val();
     var age=$('#age').val()
     var dsll=$('#dsll').val()
