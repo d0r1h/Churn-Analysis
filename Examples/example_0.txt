@@ -1,0 +1,14 @@
+membership_category = 4 			# Platinum Membership
+complaint_status = 1 				# Not Applicable
+feedback = 4 						# Products always in Stock
+age = 18
+gender_M =  0 						# female
+year = 4
+days_since_last_login = 17
+avg_time_spent = 300.63
+avg_transaction_value = 53005.25 
+avg_frequency_login_days = 17
+points_in_wallet = 781.55
+
+
+--> output: 0{Customer Will Stay}
