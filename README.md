@@ -43,6 +43,13 @@ Notebook contains the EDA, data processing, and model building ideas.
 <img src = "Project_Pipeline.png" width = 800>
 
 
+### Techstack
+
+**Python version** : 3.7 <br>
+**Packages**: pandas, numpy, skelearn, xgboost, fastapi, seaborn <br>
+**Cloud**: heroku
+
+
 ### Usage [running this locally]:
 
 ```
