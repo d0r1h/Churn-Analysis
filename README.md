@@ -15,7 +15,7 @@ This project is tasked to predict the churn score for a website based on feature
 
 ### DataSet:
 
-* Dataset taken from a Hackathon, and raw dataset can be downloaded from here. [Link](https://www.hackerearth.com/problem/machine-learning/predict-the-churn-risk-rate-11-fb7a760d/)
+* Dataset has been taken from a Hackathon, and raw dataset can be downloaded from here. [Link](https://www.hackerearth.com/problem/machine-learning/predict-the-churn-risk-rate-11-fb7a760d/)
 * Cleaned and processed version of the data can be accessed from here. [Link](https://github.com/d0r1h/Churn-Analysis/blob/main/DataSet/churnclean.csv)
 
 
