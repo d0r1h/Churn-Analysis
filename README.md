@@ -1,12 +1,12 @@
 # Customer Churn Prediction 
 
-Churn prediction, or the task of identifying customers who are likely to discontinue use of a service, is an important and lucrative concern of the any industry.
+Churn prediction, or the task of identifying customers who are likely to discontinue use of a service, is an important and lucrative concern of any industry.
 
 <img src = "https://github.com/d0r1h/d0r1h.github.io/blob/main/assets/images/churn_analysis.gif" width = 200>
 
 ### Description
 
-This project is tasked to predict the churn score for a website based on the features such as:
+This project is tasked to predict the churn score for a website based on features such as:
 
 *    User demographic information
 *    Browsing behavior
@@ -15,8 +15,8 @@ This project is tasked to predict the churn score for a website based on the fea
 
 ### DataSet:
 
-* Dataset taken from a Hakcathon, and raw dataset can be downloaded from here. [Link](https://www.hackerearth.com/problem/machine-learning/predict-the-churn-risk-rate-11-fb7a760d/)
-* Cleaned and Processed version data can be accessed from here. [Link](https://github.com/d0r1h/Churn-Analysis/blob/main/DataSet/churnclean.csv)
+* Dataset taken from a Hackathon, and raw dataset can be downloaded from here. [Link](https://www.hackerearth.com/problem/machine-learning/predict-the-churn-risk-rate-11-fb7a760d/)
+* Cleaned and processed version of the data can be accessed from here. [Link](https://github.com/d0r1h/Churn-Analysis/blob/main/DataSet/churnclean.csv)
 
 
 
@@ -30,11 +30,11 @@ Notebook contains the EDA, data processing, and model building ideas.
 
 ## Models
 
-* Final model used is an ensemble of differnet classifier as it can be seen in figure, such as:
+* The final model used is an ensemble of different classifiers such as:
     * KNN
     * Random Forest
     * Xgboost
-* It achieves 94.3% of test accuracy with 94.3% f1 score.
+* It achieves 94.3% of test accuracy.
 
 
 ## Project Pipeline
@@ -46,7 +46,7 @@ Notebook contains the EDA, data processing, and model building ideas.
 ### Techstack
 
 **Python version** : 3.7 <br>
-**Packages**: pandas, numpy, skelearn, xgboost, fastapi, seaborn <br>
+**Packages**: pandas, numpy, sklearn, xgboost, fastapi, seaborn <br>
 **Cloud**: heroku
 
 
@@ -63,5 +63,4 @@ python app.py
 
 ## Inference Demo:
 
-Application is deployed on heroku and can be accessed on https://churn01.herokuapp.com/ and sample data to test app is [here](https://github.com/d0r1h/Churn-Analysis/blob/main/Examples/example_0.txt)
-
+Application is deployed on heroku and can be accessed on https://churn01.herokuapp.com/ and sample data for the test app is [here](https://github.com/d0r1h/Churn-Analysis/blob/main/Examples/example_0.txt)
