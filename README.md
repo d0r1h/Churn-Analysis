@@ -12,7 +12,7 @@ This project is tasked to predict the churn score for a website based on feature
 *    Browsing behavior
 *    Historical purchase data among other information
 
-This project aims to identify customers who are likely to leave so that we can retain then by providing some special offers on membership, referral coupons etc.
+This project aims to identify customers who are likely to leave so that we can retain them with certain incentives.
 
 
 ### DataSet:
