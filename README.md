@@ -12,6 +12,8 @@ This project is tasked to predict the churn score for a website based on feature
 *    Browsing behavior
 *    Historical purchase data among other information
 
+This project aims to identify customers who are likely to leave so that we can retain then by providing some special offers on membership, referral coupons etc.
+
 
 ### DataSet:
 
@@ -26,15 +28,17 @@ Notebook contains the EDA, data processing, and model building ideas.
 
 | Notebook | Colab | Kaggle |
 | ------ | ------ | ------ |
-| Customer Churn | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/d0r1h/Churn-Analysis/blob/main/customer-churn.ipynb) | [![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/undersc0re/customer-churn) |
+| Customer Churn Modeling | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/d0r1h/Churn-Analysis/blob/main/notebook/customer-churn.ipynb) | [![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/undersc0re/customer-churn) |
+| Exploratory data analysis | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/d0r1h/Churn-Analysis/blob/main/notebook/eda-customer-churn.ipynb) | [![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/undersc0re/eda-customer-churn)
+
 
 ## Models
 
 * The final model used is an ensemble of different classifiers such as:
     * KNN
     * Random Forest
+    * AdaBoost
     * Xgboost
-* It achieves 94.3% of test accuracy.
 
 
 ## Project Pipeline
@@ -61,6 +65,16 @@ pip install -r requirements.txt
 python app.py
 ```
 
+## Results 
+
+* Even though Xgboost is giving good Test Accuracy of ~ 93% but we need to focus on the customers who are leaving i.e. class 1, so that we can retain them with some discount offer on membership.
+* Ensemble methods (stack classifier) is having 94% of recall for predicting the customers who are likely to leave, higher than Xgboost.
+
+
+
+
 ## Inference Demo:
 
 Application is deployed on heroku and can be accessed on https://churn01.herokuapp.com/ and sample data for the test app is [here](https://github.com/d0r1h/Churn-Analysis/blob/main/Examples/example_0.txt)
+
+
