@@ -2,7 +2,7 @@
 
 Churn prediction, or the task of identifying customers who are likely to discontinue use of a service, is an important and lucrative concern of any industry.
 
-<img src = "https://github.com/d0r1h/d0r1h.github.io/blob/main/assets/images/churn_analysis.gif" width = 200>
+<img src = "https://github.com/d0r1h/Churn-Analysis/blob/main/static/churn_analysis.gif" width = 200>
 
 ### Description
 
@@ -64,6 +64,13 @@ cd Churn-Analysis
 pip install -r requirements.txt
 python app.py
 ```
+
+To download dataset and preprocess automatically run following script
+
+```python
+!pip install datasets
+!python src/preprocess.py
+``` 
 
 ## Results 
 
